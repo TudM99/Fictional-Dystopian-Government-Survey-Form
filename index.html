@@ -19,16 +19,19 @@ margin: auto;
 max-width: 35%;
 max-height: auto;
 }
-.back_body{
 
+.back_body{
 background-color: black;
 }
+
+
 .allign_header{
 text-align:center;
 font-family: "Special Elite", monospace;
 margin-top: 30px;
 line-height: 200%;
 }
+
 .font{
 font-family: "Special Elite", monospace;
 padding: 10px;
@@ -44,6 +47,7 @@ input[type=text], select {
   border-radius: 4px;
   box-sizing: border-box;
 }
+
 input[type=email]{
   width: 100%;
   padding: 12px 20px;
@@ -53,6 +57,7 @@ input[type=email]{
   border-radius: 4px;
   box-sizing: border-box;
 }
+
 input[type=number]{
   width: 100%;
   padding: 12px 20px;
@@ -62,6 +67,7 @@ input[type=number]{
   border-radius: 4px;
   box-sizing: border-box;
 }
+
 input[type=submit] {
   width: 50%;
   background-color: #2e2e2e;
@@ -89,6 +95,24 @@ input[type=submit]:hover {
   justify-content: center;
   align-items: center;
 }
+.fieldclass{
+margin-top: 15px;
+
+}
+
+textarea{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.textclass{
+margin-top: 15px;
+
+}
 </style>
 <head>
 
@@ -96,7 +120,7 @@ input[type=submit]:hover {
 </head>
 <body class="back_body">
 
-<img src="images/eye.png" class="eye" alt="The All Seeing Eye">
+<img src="https://i.imgur.com/7Mn6axW.png" class="eye" alt="The All Seeing Eye">
 
 <div class="center">
 <h1 class="allign_header" id="title"> Official M.S.L.T. Portal</h1>
@@ -109,17 +133,96 @@ input[type=submit]:hover {
 
 <div class="cssform">
   <form id="survey-form">
-    <label for="name">Name</label>
+    <label for="name" id="name-label">Name</label>
     <input type="text" id="name" name="full_name" placeholder="John Doe" required>
 	
-	<label for="email">Email</label>
+	<label for="email" id="email-label">Email</label>
     <input type="email" id="email" name="email_address" placeholder="user@domain.com" required>
 
-    <label for="number">Ticket Number</label>
+    <label for="number" id="number-label">Ticket Number</label>
     <input type="number" id="number" name="ticket_number" placeholder="###" required maxlength="3" min="0" max="300">
-	<div class="centerbutton">
-    <input type="submit" value="Submit">
+	
+	<label for="dropdown">Choose a position:</label>
+		<select id="dropdown" name="position">
+			<option value="opagent">Operations Agent</option>
+			<option value="opofficer">Operations Officer</option>
+			<option value="intagent">Intelligence Agent</option>
+			<option value="intofficer">Intelligence Officer</option>
+		</select>
+	
+	<div class="fieldclass">
+	 <fieldset>
+       <legend>Education Level</legend>
+       <p>           
+          <input type = "radio"
+                 name = "education"
+                 id = "highschool"
+                 value = "highschool"
+                 checked = "checked" />
+         
+		 <label for = "highschool">Highschool</label>
+          
+		  
+		  <input type = "radio"
+                 name = "education"
+                 id = "bachelors"
+                 value = "bachelors" />
+         
+		 <label for = "bachelors">Bachelor's</label>
+          
+		  
+		  <input type = "radio"
+                 name = "education"
+                 id = "masters"
+                 value = "masters" />
+          
+		  <label for = "masters">Master's</label>
+       
+	   </p>       
+      </fieldset> 
 	</div>
+	
+	<div class="fieldclass">
+	<fieldset>
+       <legend>Which of the figures below are known for their work in psychoanalysis?</legend>
+       <p>           
+          <input type = "checkbox"
+                 name = "psych_01"
+                 id = "carl"
+                 value = "one"/>
+                 
+         
+		 <label for = "carl">Carl Gustav Jung</label>
+          
+		  
+		  <input type = "checkbox"
+                 name = "psych_02"
+                 id = "sigmund"
+                 value = "one" />
+         
+		 <label for = "sigmund">Sigmund Freud</label>
+          
+		  
+		  <input type = "checkbox"
+                 name = "psych_03"
+                 id = "emil"
+                 value = "zero" />
+          
+		  <label for = "emil">Emil Cioran</label>
+       
+	   </p>       
+    </fieldset> 
+	</div>
+	
+	<div class="textclass">
+		<label for="comments">Explain your reasons for joining the M.S.L.T. admission programme.</label>
+		<textarea id="comments" name="reasons" maxlength="1000" style="resize: none;">Keep it nice and simple.</textarea>
+	</div>
+	
+	
+<div class="centerbutton">
+	<input type="submit" value="Submit" id="submit">
+</div>
   </form>
 </div>
 
