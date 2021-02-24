@@ -25,9 +25,7 @@ background-color: black;
 }
 .allign_header{
 text-align:center;
-font-size: 23px;
 font-family: "Special Elite", monospace;
-font-size:25px;
 margin-top: 30px;
 line-height: 200%;
 }
@@ -36,10 +34,60 @@ font-family: "Special Elite", monospace;
 padding: 10px;
 font-size:20px;
 }
-.fieldset_border{
- border-style: dashed;
- border-width: 2px;
- border-color: black;
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=email]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=number]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  width: 50%;
+  background-color: #2e2e2e;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #0f0f0f;
+}
+
+.cssform {
+  border-radius: 5px;
+  background-color: #E0D3AF;
+  padding: 10px;
+  font-family: "Special Elite", monospace;
+  font-size: 18px;
+}
+.centerbutton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
 <head>
@@ -51,34 +99,31 @@ font-size:20px;
 <img src="images/eye.png" class="eye" alt="The All Seeing Eye">
 
 <div class="center">
-<p class="allign_header"> Official M.S.L.T. Portal</p>
-<p class="font">The questionnaire bellow will assess your eligibility for the M.S.L.T. training program.</p>
+<h1 class="allign_header" id="title"> Official M.S.L.T. Portal</h1>
+<p class="font" id="description">The questionnaire bellow will assess your eligibility for the M.S.L.T. training program.</p>
 
-<p class="font">Due to security concerns, please enter your full name and SSN below.</p>
+<p class="font">Please enter your details below.</p>
 
-<form class="font">
 
-<div>
-     <label for="SSN">SSN:</label>
-     <input type="email" id="SSN" placeholder="###-##-####" maxlength="11">
-     <br>
-     <label for="name">Name:</label>
-     <input type="email" id="name" placeholder="John Doe" maxlength="11">
+
+
+<div class="cssform">
+  <form id="survey-form">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="full_name" placeholder="John Doe" required>
+	
+	<label for="email">Email</label>
+    <input type="email" id="email" name="email_address" placeholder="user@domain.com" required>
+
+    <label for="number">Ticket Number</label>
+    <input type="number" id="number" name="ticket_number" placeholder="###" required maxlength="3" min="0" max="300">
+	<div class="centerbutton">
+    <input type="submit" value="Submit">
+	</div>
+  </form>
 </div>
 
 
-<p class="font">A full background check will be performed and you may be contacted before your admission results. By clicking "Submit", you agree to these terms.</p>
-
-<fieldset class="fieldset_border">
-        <legend>Kill your family, or an entire foreign city?</legend>
-        <input id="family" type="radio" name="firstquestion" value="family">
-        <label for="family">Family</label><br>
-        <input id="strangers" type="radio" name="firstquestion" value="strangers">
-        <label for="strangers">Foreign City</label><br>
-        
-      </fieldset>
-
-</form>
 </body>
 
 </html>
