@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+.center{
+height: 30%;
+width: 60%;
+background-color: #E0D3AF;
+margin: auto;
+border-radius: 6px;
+border-style: dotted;
+border-width: 10px;
+border-color: black;
+}
+
+.eye{
+display: block;
+margin: auto;
+max-width: 35%;
+max-height: auto;
+}
+.back_body{
+
+background-color: black;
+}
+.allign_header{
+text-align:center;
+font-size: 23px;
+font-family: "Special Elite", monospace;
+font-size:25px;
+margin-top: 30px;
+line-height: 200%;
+}
+.font{
+font-family: "Special Elite", monospace;
+padding: 10px;
+font-size:20px;
+}
+.fieldset_border{
+ border-style: dashed;
+ border-width: 2px;
+ border-color: black;
+}
+</style>
+<head>
+
+<title>M.S.L.T.</title>
+</head>
+<body class="back_body">
+
+<img src="images/eye.png" class="eye" alt="The All Seeing Eye">
+
+<div class="center">
+<p class="allign_header"> Official M.S.L.T. Portal</p>
+<p class="font">The questionnaire bellow will assess your eligibility for the M.S.L.T. training program.</p>
+
+<p class="font">Due to security concerns, please enter your full name and SSN below.</p>
+
+<form class="font">
+
+<div>
+     <label for="SSN">SSN:</label>
+     <input type="email" id="SSN" placeholder="###-##-####" maxlength="11">
+     <br>
+     <label for="name">Name:</label>
+     <input type="email" id="name" placeholder="John Doe" maxlength="11">
+</div>
+
+
+<p class="font">A full background check will be performed and you may be contacted before your admission results. By clicking "Submit", you agree to these terms.</p>
+
+<fieldset class="fieldset_border">
+        <legend>Kill your family, or an entire foreign city?</legend>
+        <input id="family" type="radio" name="firstquestion" value="family">
+        <label for="family">Family</label><br>
+        <input id="strangers" type="radio" name="firstquestion" value="strangers">
+        <label for="strangers">Foreign City</label><br>
+        
+      </fieldset>
+
+</form>
+</body>
+
+</html>
